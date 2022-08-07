@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import {Fragment, useState} from 'react';
 import './App.css';
-
+import Header from './components/Header/Header';
+import SideDrawerMini from './components/SideDrawerMini/SideDrawerMini';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+import Home from './pages1/Home';
 function App() {
+const [show, setShow] = useState(false);
+const sideDrawerHandler = () => {
+  setShow(!show);
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header sideDrawerHandler={sideDrawerHandler} show={show} />
+      {!show && <SideDrawerMini />}
+      {show && <SideDrawer />}
+      <Home show={show} />
+    </Fragment>
+      
   );
 }
 

@@ -1,0 +1,80 @@
+.banner {
+    background-image: url('../assets/banner.png');
+    
+    background-position: center;
+    background-size: cover;
+    width: calc(100vw - 83px);
+    margin-left: auto;
+}
+.banner2 {
+    width: calc(100vw - 298px);
+}
+.row {
+    display: flex;
+    column-gap: 20px;
+    color: white;
+}
+.col6 {
+    flex: 0 1 50%;
+    position: relative;
+}
+.rowSpacing {
+    padding: 0 85px;
+    padding-top: 195px;
+}
+.image1 {
+    width: 520px;
+}
+.contentContainer h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+    text-align: right;
+}
+.contentContainer p {
+    font-weight: 400;
+font-size: 18px;
+color: white;
+margin-top: 20px;
+text-align: right;
+}
+.contentContainer div {
+    text-align: right;
+    margin-top: 20px;
+}
+.posAbs {
+    position: absolute;
+    bottom: 15px;
+    padding: 0 20px;
+}
+.justifyContentEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+.rowSpacing2 {
+    padding: 0 85px;
+}
+@media screen and (max-width: 1140px) {
+    .row {
+        flex-direction: column;
+    }
+    .contentContainer h2,
+    .contentContainer p,
+    .contentContainer div {
+        text-align: left;
+    }
+    .image1 {
+        width: 420px;
+    }
+    .posAbs {
+        width: 420px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .image1 {
+        width: 300px;
+    }
+    .posAbs {
+        width: 300px;
+    }
+}

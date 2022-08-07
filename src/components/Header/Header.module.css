@@ -1,0 +1,35 @@
+.header {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    position: fixed;
+    width: calc(100vw - 83px);
+    top: 27px;
+    left: 83px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.leftContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.rightContainer {
+    display: flex;
+    list-style: none;
+    column-gap: 70px;
+}
+.searchIcon {
+    font-size: 22px;
+    color: white;
+}
+.rightContainer li {
+    display: flex;
+    align-items: center;
+}
+.miniHeader {
+    width: calc(100vw - 298px);
+    left: 298px;
+}
